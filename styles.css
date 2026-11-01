@@ -141,78 +141,14 @@ html.js .reveal.is-in{opacity:1;transform:none}
 .count.closed .cells,.count.closed .lbl{display:none}
 .count.closed .announce{display:block}
 
-/* hero art */
-.hero-art{position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:540px;z-index:1}
-.feathers{position:absolute;bottom:300px;left:50%;transform:translateX(-50%);width:min(470px,92%);opacity:.95;animation:featherIn 1.4s ease both .2s}
-.arch{
-  position:relative;width:min(330px,84vw);
-  background:linear-gradient(180deg,#f9e2a2 0%,#ecc168 46%,#d99f36 100%);
-  border-radius:170px 170px 22px 22px;
-  padding:56px 30px 30px;text-align:center;color:var(--maroon);
-  box-shadow:0 30px 80px -24px rgba(242,185,61,.45),0 6px 22px rgba(0,0,0,.45);
-}
-.arch::before{
-  content:"";position:absolute;inset:11px;border:1.6px dashed rgba(90,45,0,.4);
-  border-radius:160px 160px 14px 14px;pointer-events:none;
-}
-.arch .dev{font-family:var(--font-display);font-weight:400;line-height:.92;display:block}
-.arch .d1{font-size:2rem}
-.arch .d2{font-size:2.9rem;letter-spacing:.02em}
-.arch .d3{font-size:4.6rem;margin-top:2px}
-.arch .d4{font-size:2.9rem}
-.arch .chip{
-  display:inline-block;margin-top:16px;background:#2a1600;color:var(--gold-2);
-  font-family:var(--font-head);font-weight:700;font-size:.78rem;letter-spacing:.14em;
-  padding:.5em 1.1em;border-radius:999px;
-}
-.arch .pool{margin-top:12px;font-family:var(--font-head);font-weight:700;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:#5a3608}
-.diya{position:absolute;bottom:-14px;width:46px;height:40px}
-.diya.dl{left:-20px}.diya.dr{right:-20px}
-.diya .bowl{position:absolute;bottom:0;left:0;right:0;height:20px;border-radius:4px 4px 16px 16px;background:radial-gradient(circle at 40% 20%,#b65c2a,#7c3414 70%)}
-.diya .flame{
-  position:absolute;bottom:16px;left:50%;width:14px;height:20px;margin-left:-7px;
-  background:radial-gradient(circle at 50% 80%,#fff3c4 0%,#ffc23c 45%,#ff7a1f 80%,transparent 100%);
-  border-radius:50% 50% 50% 50%/62% 62% 38% 38%;
-  transform-origin:50% 100%;animation:flick 1.6s ease-in-out infinite alternate;
-  filter:drop-shadow(0 0 8px rgba(255,170,40,.8));
-}
-.diya.dr .flame{animation-delay:.7s}
-
-/* iPhone mockup */
-.phone-wrap{position:absolute;left:-26px;bottom:-6px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:12px;animation:floaty 5.5s ease-in-out infinite}
-.iphone{
-  position:relative;width:172px;height:354px;border-radius:34px;
-  background:linear-gradient(160deg,#394150,#12151c 60%);
-  border:3px solid #4a5260;
-  box-shadow:0 34px 60px -18px rgba(0,0,0,.75),0 0 60px -6px rgba(246,196,83,.35);
-  overflow:hidden;
-}
-.iphone .screen{
-  position:absolute;inset:7px;border-radius:26px;overflow:hidden;
-  background:
-    radial-gradient(130% 60% at 50% 108%,rgba(246,196,83,.5),transparent 60%),
-    radial-gradient(120% 90% at 85% -10%,#2a1b4d,transparent 60%),
-    linear-gradient(180deg,#141229,#1d1030 55%,#2b1430);
-  display:flex;flex-direction:column;align-items:center;
-  padding:46px 12px 16px;gap:8px;text-align:center;
-}
-.iphone .island{position:absolute;top:13px;left:50%;transform:translateX(-50%);width:62px;height:19px;border-radius:12px;background:#000;z-index:2}
-.iphone .time{font-family:var(--font-head);font-weight:700;font-size:1.9rem;color:#fff;letter-spacing:.02em;line-height:1}
-.iphone .date{font-size:.62rem;color:#c9c3e2;letter-spacing:.12em;text-transform:uppercase}
-.iphone .s-diya{margin-top:auto;margin-bottom:auto;font-size:2rem;line-height:1;filter:drop-shadow(0 0 12px rgba(255,170,40,.75))}
-.iphone .s-msg{font-family:var(--font-display);color:var(--gold-2);font-size:1.02rem;line-height:1.25}
-.iphone .s-chip{margin-top:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;padding:.5em 1em;border-radius:999px}
-.iphone::after{ /* glass sweep */
-  content:"";position:absolute;inset:0;border-radius:30px;pointer-events:none;
-  background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.14) 50%,transparent 58%);
-  background-size:260% 100%;animation:sweep 5s ease-in-out infinite;
-}
-.phone-tag{
-  background:rgba(16,23,37,.9);border:1px solid var(--line-2);border-radius:999px;
-  font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--gold-2);padding:.55em 1.2em;white-space:nowrap;
-  box-shadow:var(--shadow);
-}
+/* supplied Diwali prize artwork */
+.hero-art{position:relative;display:flex;justify-content:center;align-items:center;min-height:0;z-index:1}
+.hero-poster-intro{width:min(100%,500px);animation:posterEnter .9s cubic-bezier(.2,.7,.25,1) both}
+.hero-poster{position:relative;display:block;width:100%;margin:0;border:1px solid rgba(246,196,83,.42);border-radius:26px;overflow:hidden;background:#170c21;box-shadow:0 34px 90px -34px rgba(255,174,35,.48),0 22px 54px rgba(0,0,0,.5);animation:posterFloat 6.4s ease-in-out infinite;transition:transform .3s ease,box-shadow .3s ease}
+.hero-poster::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,239,191,.1);animation:posterGlow 3.6s ease-in-out infinite}
+.hero-poster:hover{animation-play-state:paused;transform:translateY(-3px) scale(1.008);box-shadow:0 38px 100px -30px rgba(255,174,35,.6),0 22px 54px rgba(0,0,0,.5)}
+.hero-poster:focus-visible{outline:3px solid var(--gold-2);outline-offset:5px}
+.hero-poster img{display:block;width:100%;height:auto}
 .hero-scroll{display:flex;justify-content:center;margin-top:46px}
 .hero-scroll a{color:var(--dim);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;display:inline-flex;flex-direction:column;align-items:center;gap:6px}
 .hero-scroll a:hover{color:var(--gold)}
@@ -343,14 +279,11 @@ html.js .reveal.is-in{opacity:1;transform:none}
 .grand .tag{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .grand h3{font-size:1.9rem;font-weight:800}
 .grand .up{color:var(--gold);font-size:.92rem;font-weight:600}
-.unlock-phone{display:flex;justify-content:center;padding-top:6px}
-.unlock-phone .iphone{width:120px;height:246px;border-radius:26px}
-.unlock-phone .iphone .screen{inset:5px;border-radius:20px;padding:30px 8px 10px}
-.unlock-phone .iphone .island{width:44px;height:13px;top:9px}
-.unlock-phone .iphone .time{font-size:1.25rem}
-.unlock-phone .iphone .s-diya{font-size:1.4rem}
-.unlock-phone .iphone .s-msg{font-size:.72rem}
-.unlock-phone .iphone .s-chip{font-size:.44rem}
+.prize-poster-card{padding:0;min-height:620px;overflow:hidden}
+.grand-poster-link{position:absolute;inset:0;display:block;overflow:hidden;border-radius:inherit}
+.grand-poster-link img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.grand-poster-link:hover img{transform:scale(1.025)}
+.grand-poster-link:focus-visible{outline:3px solid var(--gold-2);outline-offset:-5px}
 .leader-row{
   margin-top:auto;display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);
   padding-top:16px;color:var(--muted);font-size:.9rem;
@@ -463,6 +396,15 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:46p
 @keyframes featherIn{from{opacity:0;transform:translateX(-50%) translateY(26px) scale(.94)}to{opacity:.95;transform:translateX(-50%) translateY(0) scale(1)}}
 @keyframes stepArrow{0%,100%{transform:translateX(0);opacity:.65}50%{transform:translateX(5px);opacity:1}}
 @keyframes stepArrowDown{0%,100%{transform:translate(-50%,0);opacity:.65}50%{transform:translate(-50%,5px);opacity:1}}
+@keyframes posterEnter{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes posterFloat{0%,100%{transform:translateY(0) rotate(-.25deg)}50%{transform:translateY(-7px) rotate(.25deg)}}
+@keyframes posterGlow{
+  0%,68%,100%{box-shadow:inset 0 0 0 1px rgba(255,239,191,.08)}
+  72%,77%{box-shadow:inset 0 0 0 1px rgba(255,220,120,.48),inset 0 0 22px rgba(255,194,60,.18)}
+  74%,82%{box-shadow:inset 0 0 0 1px rgba(255,239,191,.12)}
+  86%{box-shadow:inset 0 0 0 1px rgba(255,220,120,.34)}
+  90%{box-shadow:inset 0 0 0 1px rgba(255,239,191,.08)}
+}
 
 /* ---------- responsive ---------- */
 @media (max-width:1020px){
@@ -518,6 +460,7 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:46p
   .rewards-card{padding:58px 18px 30px}
   .rail{margin-inline:-4px}
   .grand{padding:26px 20px}
+  .prize-poster-card{padding:0;min-height:0;aspect-ratio:1086/1294}
   .wa-fab{width:48px;height:48px;right:calc(14px + env(safe-area-inset-right,0px))}
   .sticky-cta{
     display:flex;position:fixed;left:0;right:0;bottom:0;z-index:54;
@@ -533,7 +476,7 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:46p
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
-  .ticker-track,.ember,.lantern,.phone-wrap,.toran i,.lights .bulb,.coin::after,
+  .ticker-track,.ember,.lantern,.phone-wrap,.hero-poster-intro,.hero-poster,.hero-poster::after,.toran i,.lights .bulb,.coin::after,
   .iphone::after,.diya .flame,.hero-scroll .arr,.pulse,.feathers,.step::after{animation:none !important}
   html.js .reveal{opacity:1;transform:none;transition:none}
 }
