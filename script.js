@@ -65,52 +65,6 @@
     revealEls.forEach(function(el){el.classList.add('is-in')});
   }
 
-  /* ---------- charge meter: % count-up + odometer ---------- */
-  var METER_PCT=34, METER_VAL='34.2';
-  var odo=document.getElementById('odo');
-  if(odo){
-    var frag='₹ ';
-    odo.textContent='';
-    odo.insertAdjacentHTML('beforeend','<span class="sep">'+frag+'</span>');
-    METER_VAL.split('').forEach(function(chr,idx){
-      if(/\d/.test(chr)){
-        var digits='';
-        for(var d=0;d<=9;d++){digits+='<b>'+d+'</b>';}
-        odo.insertAdjacentHTML('beforeend',
-          '<span class="drum"><span class="reel" data-d="'+chr+'" style="--dd:'+(idx*0.14)+'s">'+digits+'</span></span>');
-      }else{
-        odo.insertAdjacentHTML('beforeend','<span class="sep">'+chr+'</span>');
-      }
-    });
-  }
-  var gauge=document.getElementById('gaugeCard'),pctNum=document.getElementById('pctNum'),meterRun=false;
-  function runMeter(){
-    if(meterRun)return;meterRun=true;
-    if(odo){
-      odo.querySelectorAll('.reel').forEach(function(r){
-        r.style.transform='translateY(-'+r.getAttribute('data-d')+'em)';
-      });
-    }
-    if(!pctNum)return;
-    if(reduced){pctNum.textContent=METER_PCT;return;}
-    var t0=null;
-    function stepFn(ts){
-      if(t0===null)t0=ts;
-      var p=Math.min((ts-t0)/1800,1);
-      pctNum.textContent=Math.round(METER_PCT*(1-Math.pow(1-p,3)));
-      if(p<1)requestAnimationFrame(stepFn);
-    }
-    requestAnimationFrame(stepFn);
-  }
-  if(gauge){
-    if('IntersectionObserver' in window){
-      var mio=new IntersectionObserver(function(entries){
-        entries.forEach(function(en){if(en.isIntersecting){runMeter();mio.disconnect();}});
-      },{threshold:.35});
-      mio.observe(gauge);
-    }else{runMeter();}
-  }
-
   /* ---------- header shadow ---------- */
   var head=document.getElementById('siteHead');
   function onScroll(){head.classList.toggle('scrolled',window.scrollY>8)}
