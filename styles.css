@@ -279,7 +279,7 @@ html.js .reveal.is-in{opacity:1;transform:none}
 .grand .tag{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .grand h3{font-size:1.9rem;font-weight:800}
 .grand .up{color:var(--gold);font-size:.92rem;font-weight:600}
-.prize-poster-card{padding:0;min-height:620px;overflow:hidden}
+.prize-poster-card{padding:0;min-height:0;aspect-ratio:1199/1312;align-self:start;overflow:hidden}
 .grand-poster-link{position:absolute;inset:0;display:block;overflow:hidden;border-radius:inherit}
 .grand-poster-link img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
 .grand-poster-link:hover img{transform:scale(1.025)}
@@ -460,7 +460,7 @@ footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:46p
   .rewards-card{padding:58px 18px 30px}
   .rail{margin-inline:-4px}
   .grand{padding:26px 20px}
-  .prize-poster-card{padding:0;min-height:0;aspect-ratio:1086/1294}
+  .prize-poster-card{padding:0;min-height:0;aspect-ratio:1199/1312}
   .wa-fab{width:48px;height:48px;right:calc(14px + env(safe-area-inset-right,0px))}
   .sticky-cta{
     display:flex;position:fixed;left:0;right:0;bottom:0;z-index:54;
